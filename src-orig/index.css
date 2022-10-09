@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap");
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) #6a5be2;
+  background-size: 400% 400%;
+  -webkit-animation: gradient 20s ease infinite;
+          animation: gradient 20s ease infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.App {
+  width: 550px;
+  border-radius: 30px;
+  padding: 40px;
+  background-color: #fff;
+  position: relative;
+  margin: 30px 0;
+}
+
+.App .result,
+.App .start {
+  text-align: center;
+}
+
+.App .result button,
+.App .start button {
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  border-radius: 30px;
+  border: 0;
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #f00067;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.App .result h2,
+.App .start h2 {
+  margin-bottom: 0;
+}
+
+.App .result > img,
+.App .start > img {
+  width: 150px;
+}
+
+.App .progress {
+  height: 10px;
+  border-radius: 30px;
+  background-color: #e8e8e8;
+  margin-bottom: 25px;
+}
+
+.App .progress__inner {
+  height: 100%;
+  border-radius: 30px;
+  width: 80%;
+  background: #12e730;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: -webkit-gradient(linear, left top, right top, from(#12e730), to(#00d4ff));
+  background: linear-gradient(90deg, #12e730 0%, #00d4ff 100%);
+}
+
+.App:before, .App:after {
+  content: '';
+  display: block;
+  height: 50px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.App:before {
+  width: 95%;
+  bottom: -10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 0;
+}
+
+.App:after {
+  width: 90%;
+  bottom: -20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.App h1 {
+  margin: 0;
+}
+
+.App > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.App > ul li {
+  padding: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.App > ul li:hover {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.result_title {
+  margin: 20px !important;
+  font-size: 2.25rem;
+}
+
+hr {
+  border: none;
+  background-color: #b2b2b2;
+  height: 1px;
+}
+
+.questions_result {
+  text-align: left;
+}
+
+.questions_result h1 {
+  margin: 20px 0;
+}
+
+.questions_result ul {
+  margin: 0;
+  padding: 0;
+}
+
+.questions_result ul li {
+  list-style: none;
+  padding: 0;
+}
+
+.questions_result .question_result {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.questions_result .question_result.user_answer {
+  border-color: rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.questions_result .question_result:hover {
+  border: 2px solid rgba(0, 0, 0, 0.4);
+}
+/*# sourceMappingURL=index.css.map */
