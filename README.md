@@ -11,4 +11,4 @@ ProgressBar до окончания текста
 
 ![image](https://user-images.githubusercontent.com/82458628/194748433-b4df9da5-7c01-4d1c-90d3-ef11d5defe38.png)
 
-![image](https://user-images.githubusercontent.com/82458628/194748412-f56e8c22-46ce-49d2-9c26-1b8ce47cc3ff.png)
+![image](https://user-images.githubusercontent.com/82458628/194748486-110c1cfa-ef01-42cb-8dd3-5a354bf7bf0c.png)
