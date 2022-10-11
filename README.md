@@ -12,7 +12,7 @@
 🔥 Реализация через хук useState.
 
 ## Модальное окно
-![1660249510674](https://user-images.githubusercontent.com/12086860/184235807-bfb5d74b-68dc-4903-8b15-e18f6427fcc2.png)
+![image](https://user-images.githubusercontent.com/82458628/195189423-1c68a257-d036-444b-866b-d77aedb6a942.png)
 
 **🌿 Ветка**: `modal`
 
