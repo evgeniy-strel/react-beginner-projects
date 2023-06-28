@@ -1,6 +1,6 @@
 import React from 'react';
 
-const defaultCurrencies = ['RUB', 'USD', 'EUR', 'GBP'];
+const defaultCurrencies = ['RUB', 'USD', 'EUR', 'UAH'];
 
 type propsType = {
   value: number;
@@ -32,8 +32,8 @@ export const Block = ({
   };
 
   return (
-    <div className='block'>
-      <ul className='currencies'>
+    <div className="block">
+      <ul className="currencies">
         {defaultCurrencies.map((cur) => (
           <li
             onClick={() => onChangeCurrency(cur)}
@@ -43,15 +43,15 @@ export const Block = ({
           </li>
         ))}
         <li className={isShowedAll ? 'active-svg' : ''} onClick={handleShowAll}>
-          <svg height='50px' viewBox='0 0 50 50' width='50px'>
-            <rect fill='none' height='50' width='50' />
-            <polygon points='47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 ' />
+          <svg height="50px" viewBox="0 0 50 50" width="50px">
+            <rect fill="none" height="50" width="50" />
+            <polygon points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 " />
           </svg>
         </li>
       </ul>
       {isShowedAll && (
-        <div className='all-currencies-container'>
-          <ul className='currencies all-curencies'>
+        <div className="all-currencies-container">
+          <ul className="currencies all-curencies">
             {allCurrency.map((currency) => (
               <li onClick={() => handleCurrencyInAll(currency)}>{currency}</li>
             ))}
@@ -59,11 +59,7 @@ export const Block = ({
         </div>
       )}
       <div>
-        <input
-          onChange={(e) => onChangeValue(e.target.value)}
-          value={value}
-          type='number'
-        />
+        <input onChange={(e) => onChangeValue(e.target.value)} value={value} type="number" />
       </div>
     </div>
   );
