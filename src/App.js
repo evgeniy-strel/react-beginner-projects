@@ -22,7 +22,7 @@ const reducer = (state, action) => {
 };
 
 const initState = {
-  length: 10,
+  length: 6,
   isLowerCase: false,
   isUpperCase: true,
   isDigits: false,
@@ -61,13 +61,16 @@ function App() {
       <span className="subtitle">Пароль:</span>
       <h2>2UYsAhMdPR7wBHwG</h2>
       <div className="row">
-        <span>Длина пароля:</span>
+        <span>Длина:</span>
+
         <input
-          className="pwg-length"
-          type="text"
+          className="input-range"
+          type="range"
+          min="1"
+          max="11"
           value={state.length}
-          onChange={handlePasswordLength}
-        />
+          onChange={handlePasswordLength}></input>
+        <span className="pwg-length">{state.length}</span>
       </div>
       <div className="row">
         <span>Прописные буквы:</span>

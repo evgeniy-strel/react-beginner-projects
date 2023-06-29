@@ -86,11 +86,17 @@ body {
   margin-top: 20px;
 }
 
+.input-range {
+  width: 9rem;
+}
+
 .pwg-length {
-  width: 80px;
-  padding: 10px;
+  width: fit-content;
+  padding: 4px 7.5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 8px;
+  pointer-events: none;
+  font-size: 0.7rem;
 }
 
 .styled-checkbox {
