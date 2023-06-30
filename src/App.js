@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useReducer, useState } from 'react';
 import './index.scss';
 
 const reducer = (state, action) => {
@@ -22,7 +22,7 @@ const reducer = (state, action) => {
 };
 
 const initState = {
-  length: 6,
+  length: 8,
   isLowerCase: false,
   isUpperCase: true,
   isDigits: false,
@@ -31,7 +31,122 @@ const initState = {
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initState);
-  console.log(state);
+  const [password, setPassword] = useState('');
+
+  const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  const upperCase = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z',
+  ];
+  const lowerCase = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z',
+  ];
+  const symbols = [
+    '!',
+    '"',
+    '#',
+    '$',
+    '%',
+    '&',
+    "'",
+    '(',
+    ')',
+    '*',
+    '+',
+    ',',
+    '-',
+    '.',
+    '/',
+    ':',
+    ';',
+    '<',
+    '=',
+    '>',
+    '?',
+    '@',
+    '[',
+    '\\',
+    ']',
+    '^',
+    '_',
+    '`',
+  ];
+
+  const generatePassword = () => {
+    const types = getArrayTypes();
+    let password = '';
+
+    for (var i = 0; i < state.length; i++) {
+      const type = types[getRandomValue(0, types.length - 1)];
+      const symbol = type[getRandomValue(0, type.length - 1)];
+      password += symbol;
+    }
+
+    setPassword(password);
+  };
+
+  const getArrayTypes = () => {
+    const types = [];
+    if (state.isLowerCase) types.push(lowerCase);
+    if (state.isUpperCase) types.push(upperCase);
+    if (state.isDigits) types.push(digits);
+    if (state.isSymbols) types.push(symbols);
+
+    return types;
+  };
+
+  const getRandomValue = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
 
   const handlePasswordLength = (e) => {
     dispatch({
@@ -59,7 +174,7 @@ function App() {
   return (
     <div className="App">
       <span className="subtitle">Пароль:</span>
-      <h2>2UYsAhMdPR7wBHwG</h2>
+      <h2>{password}</h2>
       <div className="row">
         <span>Длина:</span>
 
@@ -116,7 +231,7 @@ function App() {
         />
         <label htmlFor="checkbox4" />
       </div>
-      <button>Сгенерировать</button>
+      <button onClick={generatePassword}>Сгенерировать</button>
     </div>
   );
 }
