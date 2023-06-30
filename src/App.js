@@ -1,4 +1,4 @@
-import { useReducer, useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import './index.scss';
 
 const reducer = (state, action) => {
@@ -170,6 +170,10 @@ function App() {
   const toggleSymbols = () => {
     dispatch({ type: 'toggle_symbols' });
   };
+
+  useEffect(() => {
+    generatePassword();
+  }, []);
 
   return (
     <div className="App">
